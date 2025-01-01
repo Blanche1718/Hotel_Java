@@ -482,10 +482,10 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jTextField6" alignment="0" pref="138" max="32767" attributes="0"/>
-                                              <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextField8" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jTextField9" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtChambreId" alignment="0" pref="138" max="32767" attributes="0"/>
+                                              <Component id="txtChambreStatut" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtChambreHotelId" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txtChambreTypeId" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -514,22 +514,22 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtChambreId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtChambreStatut" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtChambreHotelId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtChambreTypeId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -563,13 +563,13 @@
                             <Property name="text" type="java.lang.String" value="Type_id"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField6">
+                        <Component class="javax.swing.JTextField" name="txtChambreId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField7">
+                        <Component class="javax.swing.JTextField" name="txtChambreStatut">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField8">
+                        <Component class="javax.swing.JTextField" name="txtChambreHotelId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField9">
+                        <Component class="javax.swing.JTextField" name="txtChambreTypeId">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel14">
                           <Properties>
@@ -589,6 +589,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Ajouter"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton5">
                           <Properties>
@@ -597,6 +600,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Modifier"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton6">
                           <Properties>
@@ -605,6 +611,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Supprimer"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -624,6 +633,9 @@
                               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable_chambresMouseReleased"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -682,9 +694,9 @@
                                   <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                           <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jButton8" min="-2" max="-2" attributes="0"/>
@@ -701,21 +713,21 @@
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel16" min="-2" pref="64" max="-2" attributes="0"/>
                                                       <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField10" min="-2" pref="138" max="-2" attributes="0"/>
-                                              <Component id="jTextField11" min="-2" pref="138" max="-2" attributes="0"/>
-                                              <Component id="jTextField12" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                              <Component id="jTextField13" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtTypeId" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtTypeChambre" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtTypeCapacite" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtTypePrix" min="-2" pref="138" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                                  <EmptySpace pref="37" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -727,22 +739,22 @@
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTypeId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField11" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTypeChambre" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTypeCapacite" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtTypePrix" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -773,16 +785,19 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel16">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Type_id"/>
+                            <Property name="text" type="java.lang.String" value="Montant"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField10">
+                        <Component class="javax.swing.JTextField" name="txtTypeId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField11">
+                        <Component class="javax.swing.JTextField" name="txtTypeChambre">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField12">
+                        <Component class="javax.swing.JTextField" name="txtTypeCapacite">
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTypeCapaciteActionPerformed"/>
+                          </Events>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField13">
+                        <Component class="javax.swing.JTextField" name="txtTypePrix">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel17">
                           <Properties>
@@ -802,6 +817,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Ajouter"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton8">
                           <Properties>
@@ -810,6 +828,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Modifier"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton9">
                           <Properties>
@@ -818,6 +839,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Supprimer"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -837,6 +861,9 @@
                               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable_typesMouseReleased"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -896,20 +923,24 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton10" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel21" min="-2" pref="64" max="-2" attributes="0"/>
                                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="separate" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" pref="46" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jButton11" min="-2" max="-2" attributes="0"/>
@@ -918,16 +949,16 @@
                               </Group>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="jTextField14" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                      <Component id="jTextField15" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                      <Component id="jTextField16" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                      <Component id="jTextField17" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                      <Component id="jTextField19" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="txtReservationId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="txtReservationClientId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="txtReservationHotelId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="txtReservationChambreId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                      <Component id="txtReservationDateFin" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jTextField18" alignment="1" min="-2" pref="138" max="-2" attributes="0"/>
+                                  <Component id="txtReservationDateDebut" alignment="1" min="-2" pref="138" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -945,29 +976,33 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                   <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField14" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtReservationId" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField15" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtReservationClientId" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField16" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txtReservationHotelId" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="jTextField17" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txtReservationChambreId" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField18" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txtReservationDateDebut" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jTextField19" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="txtReservationDateFin" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
@@ -976,7 +1011,7 @@
                               <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton12" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="132" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1002,13 +1037,13 @@
                     <Property name="text" type="java.lang.String" value="chambre_id"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField14">
+                <Component class="javax.swing.JTextField" name="txtReservationId">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField15">
+                <Component class="javax.swing.JTextField" name="txtReservationClientId">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField16">
+                <Component class="javax.swing.JTextField" name="txtReservationHotelId">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField17">
+                <Component class="javax.swing.JTextField" name="txtReservationChambreId">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel22">
                   <Properties>
@@ -1028,6 +1063,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ajouter"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton11">
                   <Properties>
@@ -1036,6 +1074,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Modifier"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton12">
                   <Properties>
@@ -1044,20 +1085,23 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Supprimer"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel23">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="date_d&#xe9;but"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField18">
+                <Component class="javax.swing.JTextField" name="txtReservationDateDebut">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel24">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="date_fin"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField19">
+                <Component class="javax.swing.JTextField" name="txtReservationDateFin">
                 </Component>
               </SubComponents>
             </Container>
@@ -1077,6 +1121,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable_reservationsMouseReleased"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1143,10 +1190,10 @@
                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField21" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jTextField23" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBox2" alignment="0" pref="200" max="32767" attributes="0"/>
-                                      <Component id="jTextField20" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtHotelNom" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtHotelTelephone" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtHotelAdresse" alignment="0" pref="200" max="32767" attributes="0"/>
+                                      <Component id="txtHotelId" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1168,22 +1215,22 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField20" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHotelId" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHotelNom" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField23" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHotelTelephone" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtHotelAdresse" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1217,11 +1264,11 @@
                     <Property name="text" type="java.lang.String" value="Adresse"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField20">
+                <Component class="javax.swing.JTextField" name="txtHotelId">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField21">
+                <Component class="javax.swing.JTextField" name="txtHotelNom">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField23">
+                <Component class="javax.swing.JTextField" name="txtHotelTelephone">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel31">
                   <Properties>
@@ -1234,7 +1281,7 @@
                     <Property name="text" type="java.lang.String" value="HOTEL"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox2">
+                <Component class="javax.swing.JComboBox" name="txtHotelAdresse">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="95">
@@ -1347,6 +1394,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Ajouter"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton14">
                   <Properties>
@@ -1355,6 +1405,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Modifier"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton15">
                   <Properties>
@@ -1363,6 +1416,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Supprimer"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1382,6 +1438,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable_hotelsMouseReleased"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1493,10 +1552,10 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Component id="jTextField22" alignment="0" pref="138" max="32767" attributes="0"/>
-                                                  <Component id="jTextField24" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jTextField25" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jTextField26" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtServiceId" alignment="0" pref="138" max="32767" attributes="0"/>
+                                                  <Component id="txtServiceNom" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtServiceDesc" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtServicePrix" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -1513,22 +1572,22 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField22" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtServiceId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtServiceNom" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtServiceDesc" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtServicePrix" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1562,13 +1621,13 @@
                             <Property name="text" type="java.lang.String" value="prix"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField22">
+                        <Component class="javax.swing.JTextField" name="txtServiceId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField24">
+                        <Component class="javax.swing.JTextField" name="txtServiceNom">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField25">
+                        <Component class="javax.swing.JTextField" name="txtServiceDesc">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField26">
+                        <Component class="javax.swing.JTextField" name="txtServicePrix">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel34">
                           <Properties>
@@ -1588,6 +1647,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Ajouter"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton17">
                           <Properties>
@@ -1596,6 +1658,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Modifier"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton17ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton18">
                           <Properties>
@@ -1604,6 +1669,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Supprimer"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton18ActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1623,6 +1691,9 @@
                               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable_servicesMouseReleased"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1695,10 +1766,10 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField27" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                              <Component id="jTextField28" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                              <Component id="jTextField29" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
-                                              <Component id="jTextField30" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtreservationId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtserviceId" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                              <Component id="txtReserveQuantite" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -1719,22 +1790,22 @@
                                   <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField28" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtreservationId" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField29" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtserviceId" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField30" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtReserveQuantite" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -1768,13 +1839,13 @@
                             <Property name="text" type="java.lang.String" value="quantite"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField27">
+                        <Component class="javax.swing.JTextField" name="txtId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField28">
+                        <Component class="javax.swing.JTextField" name="txtreservationId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField29">
+                        <Component class="javax.swing.JTextField" name="txtserviceId">
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField30">
+                        <Component class="javax.swing.JTextField" name="txtReserveQuantite">
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel39">
                           <Properties>
@@ -1794,6 +1865,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Ajouter"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton19ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton20">
                           <Properties>
@@ -1802,6 +1876,9 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Modifier"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton20ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton21">
                           <Properties>
@@ -1829,6 +1906,9 @@
                               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
+                          <Events>
+                            <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTable_reserv&#xe9;esMouseReleased"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>

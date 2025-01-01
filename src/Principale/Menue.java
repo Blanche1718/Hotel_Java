@@ -115,10 +115,10 @@ public class Menue extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        txtChambreId = new javax.swing.JTextField();
+        txtChambreStatut = new javax.swing.JTextField();
+        txtChambreHotelId = new javax.swing.JTextField();
+        txtChambreTypeId = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -131,10 +131,10 @@ public class Menue extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
+        txtTypeId = new javax.swing.JTextField();
+        txtTypeChambre = new javax.swing.JTextField();
+        txtTypeCapacite = new javax.swing.JTextField();
+        txtTypePrix = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -147,18 +147,18 @@ public class Menue extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
+        txtReservationId = new javax.swing.JTextField();
+        txtReservationClientId = new javax.swing.JTextField();
+        txtReservationHotelId = new javax.swing.JTextField();
+        txtReservationChambreId = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jLabel23 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
+        txtReservationDateDebut = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
+        txtReservationDateFin = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable_reservations = new javax.swing.JTable();
         jPanel10 = new javax.swing.JPanel();
@@ -167,11 +167,11 @@ public class Menue extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField23 = new javax.swing.JTextField();
+        txtHotelId = new javax.swing.JTextField();
+        txtHotelNom = new javax.swing.JTextField();
+        txtHotelTelephone = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        txtHotelAdresse = new javax.swing.JComboBox<>();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
@@ -185,10 +185,10 @@ public class Menue extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        jTextField25 = new javax.swing.JTextField();
-        jTextField26 = new javax.swing.JTextField();
+        txtServiceId = new javax.swing.JTextField();
+        txtServiceNom = new javax.swing.JTextField();
+        txtServiceDesc = new javax.swing.JTextField();
+        txtServicePrix = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
@@ -201,10 +201,10 @@ public class Menue extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
+        txtreservationId = new javax.swing.JTextField();
+        txtserviceId = new javax.swing.JTextField();
+        txtReserveQuantite = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
@@ -403,12 +403,27 @@ public class Menue extends javax.swing.JFrame {
 
         jButton4.setForeground(new java.awt.Color(0, 0, 102));
         jButton4.setText("Ajouter");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setForeground(new java.awt.Color(0, 0, 102));
         jButton5.setText("Modifier");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setForeground(new java.awt.Color(0, 0, 102));
         jButton6.setText("Supprimer");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -425,10 +440,10 @@ public class Menue extends javax.swing.JFrame {
                             .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addGap(49, 49, 49)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                            .addComponent(jTextField7)
-                            .addComponent(jTextField8)
-                            .addComponent(jTextField9)))
+                            .addComponent(txtChambreId, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                            .addComponent(txtChambreStatut)
+                            .addComponent(txtChambreHotelId)
+                            .addComponent(txtChambreTypeId)))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jButton4)
@@ -450,19 +465,19 @@ public class Menue extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtChambreId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtChambreStatut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtChambreHotelId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtChambreTypeId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(108, 108, 108)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
@@ -471,6 +486,11 @@ public class Menue extends javax.swing.JFrame {
                 .addContainerGap(186, Short.MAX_VALUE))
         );
 
+        jTable_chambres.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_chambresMouseReleased(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable_chambres);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -504,7 +524,13 @@ public class Menue extends javax.swing.JFrame {
 
         jLabel15.setText("Capacité");
 
-        jLabel16.setText("Type_id");
+        jLabel16.setText("Montant");
+
+        txtTypeCapacite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTypeCapaciteActionPerformed(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 102));
@@ -512,12 +538,27 @@ public class Menue extends javax.swing.JFrame {
 
         jButton7.setForeground(new java.awt.Color(0, 0, 102));
         jButton7.setText("Ajouter");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setForeground(new java.awt.Color(0, 0, 102));
         jButton8.setText("Modifier");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setForeground(new java.awt.Color(0, 0, 102));
         jButton9.setText("Supprimer");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -528,9 +569,9 @@ public class Menue extends javax.swing.JFrame {
                 .addComponent(jLabel17)
                 .addGap(89, 89, 89))
             .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
                         .addComponent(jButton7)
                         .addGap(18, 18, 18)
                         .addComponent(jButton8)
@@ -545,15 +586,15 @@ public class Menue extends javax.swing.JFrame {
                                 .addComponent(jLabel12))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel16)
+                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel15))
                                 .addGap(31, 31, 31)))
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                            .addComponent(txtTypeId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTypeChambre, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTypeCapacite, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTypePrix, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,19 +604,19 @@ public class Menue extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTypeId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTypeChambre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTypeCapacite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTypePrix, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
@@ -584,6 +625,11 @@ public class Menue extends javax.swing.JFrame {
                 .addContainerGap(186, Short.MAX_VALUE))
         );
 
+        jTable_types.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_typesMouseReleased(evt);
+            }
+        });
         jScrollPane3.setViewportView(jTable_types);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -641,12 +687,27 @@ public class Menue extends javax.swing.JFrame {
 
         jButton10.setForeground(new java.awt.Color(0, 0, 102));
         jButton10.setText("Ajouter");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setForeground(new java.awt.Color(0, 0, 102));
         jButton11.setText("Modifier");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setForeground(new java.awt.Color(0, 0, 102));
         jButton12.setText("Supprimer");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setText("date_début");
 
@@ -659,17 +720,19 @@ public class Menue extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel24)
                     .addComponent(jButton10)
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel20)
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel18)
-                        .addComponent(jLabel19))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel20)
+                                .addComponent(jLabel19))
+                            .addGap(1, 1, 1)))
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel24)
                         .addComponent(jLabel23)))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 46, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jButton11)
@@ -677,13 +740,13 @@ public class Menue extends javax.swing.JFrame {
                         .addComponent(jButton12))
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                            .addComponent(txtReservationId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtReservationClientId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtReservationHotelId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtReservationChambreId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtReservationDateFin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtReservationDateDebut, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel22)
@@ -698,36 +761,41 @@ public class Menue extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(jLabel18)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel19)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel20)
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel21)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel23)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel24))
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel19))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtReservationId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtReservationClientId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtReservationHotelId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtReservationChambreId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtReservationDateDebut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtReservationDateFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24))))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton10)
                     .addComponent(jButton11)
                     .addComponent(jButton12))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
+        jTable_reservations.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_reservationsMouseReleased(evt);
+            }
+        });
         jScrollPane4.setViewportView(jTable_reservations);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -767,16 +835,31 @@ public class Menue extends javax.swing.JFrame {
         jLabel31.setForeground(new java.awt.Color(0, 0, 102));
         jLabel31.setText("HOTEL");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Afrique du Sud", "Algérie", "Angola", "Bénin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroun", "Centrafrique", "Comores", "Congo", "Côte d'Ivoire", "Djibouti", "Égypte", "Érythrée   ", "Eswatini", "Gabon", "Gambie", "Ghana", "Guinée", "Guinée-Bissau", "Guinée équatoriale", "Kenya", "Lesotho", "Libéria", "Libye", "Madagascar", "Malawi", "Mali", "Maroc", "Mauritanie   ", "Maurice", "Mozambique", "Namibie", "Niger", "Nigéria", "Ouganda", "Rwanda", "Sao Tomé-et-Principe", "Sénégal", "Seychelles", "Sierra Leone", "Somalie", "Soudan", "Soudan du Sud", "Tanzanie", "Tchad   ", "Togo", "Tunisie", "Zambie", "Zimbabwe   ", "Albanie", "Allemagne", "Andorre", "Autriche", "Belgique", "Biélorussie", "Bosnie-Herzégovine", "Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "France", "Grèce", "Hongrie", "Irlande", "Islande", "Italie", "Lettonie", "Liechtenstein", "Lituanie", "Luxembourg", "Macédoine du Nord", "Malte", "Moldavie", "Monaco", "Monténégro", "Norvège", "Pays-Bas", "Pologne", "Portugal", "République tchèque", "Roumanie", "Royaume-Uni", "Saint-Marin", "Serbie", "Slovaquie", "Slovénie", "Suède", "Suisse", "Ukraine" }));
+        txtHotelAdresse.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Afrique du Sud", "Algérie", "Angola", "Bénin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroun", "Centrafrique", "Comores", "Congo", "Côte d'Ivoire", "Djibouti", "Égypte", "Érythrée   ", "Eswatini", "Gabon", "Gambie", "Ghana", "Guinée", "Guinée-Bissau", "Guinée équatoriale", "Kenya", "Lesotho", "Libéria", "Libye", "Madagascar", "Malawi", "Mali", "Maroc", "Mauritanie   ", "Maurice", "Mozambique", "Namibie", "Niger", "Nigéria", "Ouganda", "Rwanda", "Sao Tomé-et-Principe", "Sénégal", "Seychelles", "Sierra Leone", "Somalie", "Soudan", "Soudan du Sud", "Tanzanie", "Tchad   ", "Togo", "Tunisie", "Zambie", "Zimbabwe   ", "Albanie", "Allemagne", "Andorre", "Autriche", "Belgique", "Biélorussie", "Bosnie-Herzégovine", "Bulgarie", "Chypre", "Croatie", "Danemark", "Espagne", "Estonie", "Finlande", "France", "Grèce", "Hongrie", "Irlande", "Islande", "Italie", "Lettonie", "Liechtenstein", "Lituanie", "Luxembourg", "Macédoine du Nord", "Malte", "Moldavie", "Monaco", "Monténégro", "Norvège", "Pays-Bas", "Pologne", "Portugal", "République tchèque", "Roumanie", "Royaume-Uni", "Saint-Marin", "Serbie", "Slovaquie", "Slovénie", "Suède", "Suisse", "Ukraine" }));
 
         jButton13.setForeground(new java.awt.Color(0, 0, 102));
         jButton13.setText("Ajouter");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setForeground(new java.awt.Color(0, 0, 102));
         jButton14.setText("Modifier");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jButton15.setForeground(new java.awt.Color(0, 0, 102));
         jButton15.setText("Supprimer");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -795,10 +878,10 @@ public class Menue extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel31)
-                            .addComponent(jTextField21)
-                            .addComponent(jTextField23)
-                            .addComponent(jComboBox2, 0, 200, Short.MAX_VALUE)
-                            .addComponent(jTextField20)))
+                            .addComponent(txtHotelNom)
+                            .addComponent(txtHotelTelephone)
+                            .addComponent(txtHotelAdresse, 0, 200, Short.MAX_VALUE)
+                            .addComponent(txtHotelId)))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jButton14)
@@ -814,19 +897,19 @@ public class Menue extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHotelId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
-                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHotelNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
-                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHotelTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHotelAdresse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
@@ -835,6 +918,11 @@ public class Menue extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTable_hotels.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_hotelsMouseReleased(evt);
+            }
+        });
         jScrollPane5.setViewportView(jTable_hotels);
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -876,12 +964,27 @@ public class Menue extends javax.swing.JFrame {
 
         jButton16.setForeground(new java.awt.Color(0, 0, 102));
         jButton16.setText("Ajouter");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setForeground(new java.awt.Color(0, 0, 102));
         jButton17.setText("Modifier");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
         jButton18.setForeground(new java.awt.Color(0, 0, 102));
         jButton18.setText("Supprimer");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -911,10 +1014,10 @@ public class Menue extends javax.swing.JFrame {
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel34)
                             .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextField22, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                                .addComponent(jTextField24)
-                                .addComponent(jTextField25)
-                                .addComponent(jTextField26)))))
+                                .addComponent(txtServiceId, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                .addComponent(txtServiceNom)
+                                .addComponent(txtServiceDesc)
+                                .addComponent(txtServicePrix)))))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
@@ -925,19 +1028,19 @@ public class Menue extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtServiceId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtServiceNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtServiceDesc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtServicePrix, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(108, 108, 108)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton16)
@@ -946,6 +1049,11 @@ public class Menue extends javax.swing.JFrame {
                 .addContainerGap(186, Short.MAX_VALUE))
         );
 
+        jTable_services.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_servicesMouseReleased(evt);
+            }
+        });
         jScrollPane6.setViewportView(jTable_services);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -987,9 +1095,19 @@ public class Menue extends javax.swing.JFrame {
 
         jButton19.setForeground(new java.awt.Color(0, 0, 102));
         jButton19.setText("Ajouter");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
 
         jButton20.setForeground(new java.awt.Color(0, 0, 102));
         jButton20.setText("Modifier");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
         jButton21.setForeground(new java.awt.Color(0, 0, 102));
         jButton21.setText("Supprimer");
@@ -1016,10 +1134,10 @@ public class Menue extends javax.swing.JFrame {
                             .addComponent(jLabel38))
                         .addGap(33, 33, 33)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtreservationId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtserviceId, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtReserveQuantite, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -1034,19 +1152,19 @@ public class Menue extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel35)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtreservationId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtserviceId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtReserveQuantite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton19)
@@ -1055,6 +1173,11 @@ public class Menue extends javax.swing.JFrame {
                 .addContainerGap(186, Short.MAX_VALUE))
         );
 
+        jTable_reservées.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_reservéesMouseReleased(evt);
+            }
+        });
         jScrollPane7.setViewportView(jTable_reservées);
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
@@ -1318,6 +1441,367 @@ public class Menue extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO hotels (id_hotel, nom, telephone, adresse) VALUES (?, ?, ?, ?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtHotelId.getText());
+            pst.setString(2, txtHotelNom.getText());
+            pst.setString(3, txtHotelTelephone.getText());
+            pst.setString(4, txtHotelAdresse.getSelectedItem().toString());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Hôtel ajouté avec succès");
+            loadTable("hotels", new String[]{"id_hotel", "nom", "telephone", "adresse"}, jTable_hotels);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout de l'hôtel : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "UPDATE hotels SET nom = ?, telephone = ?, adresse = ? WHERE id_hotel = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtHotelNom.getText());
+            pst.setString(2, txtHotelTelephone.getText());
+            pst.setString(3, txtHotelAdresse.getSelectedItem().toString());
+            pst.setString(4, txtHotelId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Hôtel modifié avec succès");
+            loadTable("hotels", new String[]{"id_hotel", "nom", "telephone", "adresse"}, jTable_hotels);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la modification de l'hôtel : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "DELETE FROM hotels WHERE id_hotel = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtHotelId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Hôtel supprimé avec succès");
+            loadTable("hotels", new String[]{"id_hotel", "nom", "telephone", "adresse"}, jTable_hotels);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la suppression de l'hôtel : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jTable_hotelsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_hotelsMouseReleased
+        // TODO add your handling code here:
+        int i=jTable_hotels.getSelectedRow();
+        DefaultTableModel model=(DefaultTableModel) jTable_hotels.getModel();
+        txtHotelId.setText(model.getValueAt(i, 0).toString());
+        txtHotelNom.setText(model.getValueAt(i, 1).toString());
+        txtHotelTelephone.setText(model.getValueAt(i, 2).toString());
+        txtHotelAdresse.setSelectedItem(model.getValueAt(i, 3).toString());
+    }//GEN-LAST:event_jTable_hotelsMouseReleased
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+         try {
+            String sql = "INSERT INTO types_chambres (id_type, type, capacite, prix) VALUES (?, ?, ?, ?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtTypeId.getText());
+            pst.setString(2, txtTypeChambre.getText());
+            pst.setInt(3, Integer.parseInt(txtTypeCapacite.getText()));
+            pst.setDouble(4, Double.parseDouble(txtTypePrix.getText()));
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Type de chambre ajouté avec succès");
+            loadTable("types_chambres", new String[]{"id_type", "type", "capacite", "prix"}, jTable_types);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout du type de chambre : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO services (id_service, nom, description, prix) VALUES (?, ?, ?, ?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtServiceId.getText());
+            pst.setString(2, txtServiceNom.getText());
+            pst.setString(3, txtServiceDesc.getText());
+            pst.setDouble(4, Double.parseDouble(txtServicePrix.getText()));
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Service ajouté avec succès");
+            loadTable("services", new String[]{"id_service", "nom", "description", "prix"}, jTable_services);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout du service : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "UPDATE services SET nom = ?, description = ?, prix = ? WHERE id_service = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtServiceNom.getText());
+            pst.setString(2, txtServiceDesc.getText());
+            pst.setDouble(3, Double.parseDouble(txtServicePrix.getText()));
+            pst.setString(4, txtServiceId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Service modifié avec succès");
+            loadTable("services", new String[]{"id_service", "nom", "description", "prix"}, jTable_services);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la modification du service : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "DELETE FROM services WHERE id_service = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtServiceId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Service supprimé avec succès");
+            loadTable("services", new String[]{"id_service", "nom", "description", "prix"}, jTable_services);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la suppression du service : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO chambres (id_chambre, statut, id_hotel, id_type) VALUES (?, ?, ?, ?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtChambreId.getText());
+            pst.setString(2, txtChambreStatut.getText());
+            pst.setString(3, txtChambreHotelId.getText());
+            pst.setString(4, txtChambreTypeId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Chambre ajoutée avec succès");
+            loadTable("chambres", new String[]{"id_chambre", "statut", "id_hotel", "id_type"}, jTable_chambres);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout de la chambre : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "UPDATE chambres SET statut = ?, id_hotel = ?, id_type = ? WHERE id_chambre = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtChambreStatut.getText());
+            pst.setString(2, txtChambreHotelId.getText());
+            pst.setString(3, txtChambreTypeId.getText());
+            pst.setString(4, txtChambreId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Chambre modifiée avec succès");
+            loadTable("chambres", new String[]{"id_chambre", "statut", "id_hotel", "id_type"}, jTable_chambres);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la modification de la chambre : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "DELETE FROM chambres WHERE id_chambre = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtChambreId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Chambre supprimée avec succès");
+            loadTable("chambres", new String[]{"id_chambre", "statut", "id_hotel", "id_type"}, jTable_chambres);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la suppression de la chambre : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO reservations (id_reservation, id_client, id_hotel, id_chambre, date_debut, date_fin) VALUES (?, ?, ?, ?, ?, ?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtReservationId.getText());
+            pst.setString(2, txtReservationClientId.getText());
+            pst.setString(3, txtReservationHotelId.getText());
+            pst.setString(4, txtReservationChambreId.getText());
+            pst.setString(5, txtReservationDateDebut.getText());
+            pst.setString(6, txtReservationDateFin.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Réservation ajoutée avec succès");
+            loadTable("reservations", new String[]{"id_reservation", "id_client", "id_hotel", "id_chambre", "date_debut", "date_fin"}, jTable_reservations);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout de la réservation : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "UPDATE reservations SET id_client = ?, id_hotel = ?, id_chambre = ?, date_debut = ?, date_fin = ? WHERE id_reservation = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtReservationClientId.getText());
+            pst.setString(2, txtReservationHotelId.getText());
+            pst.setString(3, txtReservationChambreId.getText());
+            pst.setString(4, txtReservationDateDebut.getText());
+            pst.setString(5, txtReservationDateFin.getText());
+            pst.setString(6, txtReservationId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Réservation modifiée avec succès");
+            loadTable("reservations", new String[]{"id_reservation", "id_client", "id_hotel", "id_chambre", "date_debut", "date_fin"}, jTable_reservations);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la modification de la réservation : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "DELETE FROM reservations WHERE id_reservation = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtReservationId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Réservation supprimée avec succès");
+            loadTable("reservations", new String[]{"id_reservation", "id_client", "id_hotel", "id_chambre", "date_debut", "date_fin"}, jTable_reservations);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la suppression de la réservation : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+         try {
+            String sql = "UPDATE types_chambres SET type = ?, capacite = ?, prix = ? WHERE id_type = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtTypeChambre.getText());
+            pst.setInt(2, Integer.parseInt(txtTypeCapacite.getText()));
+            pst.setDouble(3, Double.parseDouble(txtTypePrix.getText()));
+            pst.setString(4, txtTypeId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Type de chambre modifié avec succès");
+            loadTable("types_chambres", new String[]{"id_type", "type", "capacite", "prix"}, jTable_types);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la modification du type de chambre : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "DELETE FROM types_chambres WHERE id_type = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtTypeId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Type de chambre supprimé avec succès");
+            loadTable("types_chambres", new String[]{"id_type", "type", "capacite", "prix"}, jTable_types);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la suppression du type de chambre : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO services_reserves (id, id_reservation, id_service, quantite) VALUES (?, ?, ?, ?)";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtId.getText());
+            pst.setString(2, txtreservationId.getText());
+            pst.setString(3, txtserviceId.getText());
+            pst.setInt(4, Integer.parseInt(txtReserveQuantite.getText()));
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Service réservé ajouté avec succès");
+            loadTable("services_reserves", new String[]{"id","id_reservation", "id_service", "quantite"}, jTable_reservées);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout du service réservé : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "UPDATE services_reserves SET id_reservation = ?, id_service = ?, quantite = ? WHERE id = ?";
+            pst = con.prepareStatement(sql);
+            pst.setString(1, txtreservationId.getText());
+            pst.setString(2, txtserviceId.getText());
+            pst.setInt(4, Integer.parseInt(txtReserveQuantite.getText()));
+            pst.setString(4, txtId.getText());
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Service réservé modifié avec succès");
+            loadTable("services_reserves", new String[]{"id_reserve", "id_service", "id_reservation"}, jTable_reservées);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Erreur lors de la modification du service réservé : " + e.getMessage());
+        }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void txtTypeCapaciteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTypeCapaciteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTypeCapaciteActionPerformed
+
+    private void jTable_typesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_typesMouseReleased
+        // TODO add your handling code here:
+        int i = jTable_types.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jTable_types.getModel();
+        txtTypeId.setText(model.getValueAt(i, 0).toString());
+        txtTypeChambre.setText(model.getValueAt(i, 1).toString());
+        txtTypeCapacite.setText(model.getValueAt(i, 2).toString());
+        txtTypePrix.setText(model.getValueAt(i, 3).toString());
+    }//GEN-LAST:event_jTable_typesMouseReleased
+
+    private void jTable_chambresMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_chambresMouseReleased
+        // TODO add your handling code here:
+        int i = jTable_chambres.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jTable_chambres.getModel();
+        txtChambreId.setText(model.getValueAt(i, 0).toString());
+        txtChambreStatut.setText(model.getValueAt(i, 1).toString());
+        txtChambreHotelId.setText(model.getValueAt(i, 2).toString());
+        txtChambreTypeId.setText(model.getValueAt(i, 3).toString());
+    }//GEN-LAST:event_jTable_chambresMouseReleased
+
+    private void jTable_reservationsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_reservationsMouseReleased
+        // TODO add your handling code here:
+        int i = jTable_reservations.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jTable_reservations.getModel();
+        txtReservationId.setText(model.getValueAt(i, 0).toString());
+        txtReservationClientId.setText(model.getValueAt(i, 1).toString());
+        txtReservationHotelId.setText(model.getValueAt(i, 2).toString());
+        txtReservationChambreId.setText(model.getValueAt(i, 3).toString());
+        txtReservationDateDebut.setText(model.getValueAt(i, 4).toString());
+        txtReservationDateFin.setText(model.getValueAt(i, 5).toString());
+    }//GEN-LAST:event_jTable_reservationsMouseReleased
+
+    private void jTable_servicesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_servicesMouseReleased
+        // TODO add your handling code here:
+        int i = jTable_services.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jTable_services.getModel();
+        txtServiceId.setText(model.getValueAt(i, 0).toString());
+        txtServiceNom.setText(model.getValueAt(i, 1).toString());
+        txtServiceDesc.setText(model.getValueAt(i, 2).toString());
+        txtServicePrix.setText(model.getValueAt(i, 3).toString());
+    }//GEN-LAST:event_jTable_servicesMouseReleased
+
+    private void jTable_reservéesMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_reservéesMouseReleased
+        // TODO add your handling code here:
+        int i = jTable_reservées.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jTable_reservées.getModel();
+        txtId.setText(model.getValueAt(i, 0).toString());
+        txtreservationId.setText(model.getValueAt(i, 1).toString());
+        txtserviceId.setText(model.getValueAt(i, 2).toString());
+        txtReserveQuantite.setText(model.getValueAt(i, 3).toString());
+    }//GEN-LAST:event_jTable_reservéesMouseReleased
+
     /**
      * @param args the command line arguments
      */
@@ -1378,7 +1862,6 @@ public class Menue extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1463,41 +1946,42 @@ public class Menue extends javax.swing.JFrame {
     private javax.swing.JTable jTable_reservées;
     private javax.swing.JTable jTable_services;
     private javax.swing.JTable jTable_types;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField txtChambreHotelId;
+    private javax.swing.JTextField txtChambreId;
+    private javax.swing.JTextField txtChambreStatut;
+    private javax.swing.JTextField txtChambreTypeId;
+    private javax.swing.JComboBox<String> txtHotelAdresse;
+    private javax.swing.JTextField txtHotelId;
+    private javax.swing.JTextField txtHotelNom;
+    private javax.swing.JTextField txtHotelTelephone;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtReservationChambreId;
+    private javax.swing.JTextField txtReservationClientId;
+    private javax.swing.JTextField txtReservationDateDebut;
+    private javax.swing.JTextField txtReservationDateFin;
+    private javax.swing.JTextField txtReservationHotelId;
+    private javax.swing.JTextField txtReservationId;
+    private javax.swing.JTextField txtReserveQuantite;
+    private javax.swing.JTextField txtServiceDesc;
+    private javax.swing.JTextField txtServiceId;
+    private javax.swing.JTextField txtServiceNom;
+    private javax.swing.JTextField txtServicePrix;
+    private javax.swing.JTextField txtTypeCapacite;
+    private javax.swing.JTextField txtTypeChambre;
+    private javax.swing.JTextField txtTypeId;
+    private javax.swing.JTextField txtTypePrix;
     private javax.swing.JComboBox<String> txtadresse;
     private javax.swing.JTextField txtemail;
     private javax.swing.JTextField txtid;
     private javax.swing.JTextField txtnom;
     private javax.swing.JTextField txtprenom;
+    private javax.swing.JTextField txtreservationId;
+    private javax.swing.JTextField txtserviceId;
     private javax.swing.JTextField txttelephone;
     // End of variables declaration//GEN-END:variables
 }
