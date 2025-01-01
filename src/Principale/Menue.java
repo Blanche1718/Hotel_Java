@@ -52,7 +52,7 @@ public class Menue extends javax.swing.JFrame {
         loadTable("reservations", new String[]{"id_reservation", "id_client", "id_hotel", "id_chambre", "date_debut", "date_fin"}, jTable_reservations);
         loadTable("services", new String[]{"id_service", "nom", "description", "prix"}, jTable_services);
         loadTable("services_reserves", new String[]{"id", "id_reservation", "id_service", "quantite"}, jTable_reservées);
-        loadTable("paiements", new String[]{"id_paiement", "id_reservation", "montant", "methode", "date_paiement", "statut"}, jTable8);
+        loadTable("paiements", new String[]{"id", "id_reservation", "montant", "methode", "date_paiement", "statut"}, jTable_paiements);
     }
 
     private void loadTable(String tableName, String[] columns, JTable table) {
@@ -219,18 +219,18 @@ public class Menue extends javax.swing.JFrame {
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
-        jTextField33 = new javax.swing.JTextField();
-        jTextField35 = new javax.swing.JTextField();
+        txtIdPaiement = new javax.swing.JTextField();
+        txtIdReservation = new javax.swing.JTextField();
+        txtMontant = new javax.swing.JTextField();
+        txtDatePaiement = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jTextField36 = new javax.swing.JTextField();
+        cmbStatut = new javax.swing.JComboBox<>();
+        cmbMethode = new javax.swing.JComboBox<>();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTable8 = new javax.swing.JTable();
+        jTable_paiements = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1239,17 +1239,39 @@ public class Menue extends javax.swing.JFrame {
 
         jButton22.setForeground(new java.awt.Color(0, 0, 102));
         jButton22.setText("Ajouter");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
 
         jButton23.setForeground(new java.awt.Color(0, 0, 102));
         jButton23.setText("Modifier");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
 
         jButton24.setForeground(new java.awt.Color(0, 0, 102));
         jButton24.setText("Supprimer");
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feedapay", "Mobile Money", "Moov Money", "Celtis Benin" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                jButton24ActionPerformed(evt);
+            }
+        });
+
+        cmbStatut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Payé", "En attente", " " }));
+        cmbStatut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbStatutActionPerformed(evt);
+            }
+        });
+
+        cmbMethode.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feedapay", "Mobile Money", "Moov Money", "Celtis Benin" }));
+        cmbMethode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbMethodeActionPerformed(evt);
             }
         });
 
@@ -1270,12 +1292,12 @@ public class Menue extends javax.swing.JFrame {
                             .addComponent(jLabel44))
                         .addGap(49, 49, 49)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField31, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                            .addComponent(jTextField32)
-                            .addComponent(jTextField33)
-                            .addComponent(jTextField35)
-                            .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField36)))
+                            .addComponent(txtIdPaiement, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                            .addComponent(txtIdReservation)
+                            .addComponent(txtMontant)
+                            .addComponent(txtDatePaiement)
+                            .addComponent(cmbStatut, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbMethode, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(110, 110, 110)
                         .addComponent(jLabel46))
@@ -1296,36 +1318,42 @@ public class Menue extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdPaiement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel41)
-                    .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIdReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel42)
-                    .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMontant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel44)
-                    .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel45)
-                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
+                    .addComponent(cmbMethode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(txtDatePaiement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel45))
+                    .addComponent(cmbStatut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton22)
                     .addComponent(jButton23)
                     .addComponent(jButton24))
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(169, Short.MAX_VALUE))
         );
 
-        jScrollPane8.setViewportView(jTable8);
+        jTable_paiements.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable_paiementsMouseReleased(evt);
+            }
+        });
+        jScrollPane8.setViewportView(jTable_paiements);
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1364,9 +1392,9 @@ public class Menue extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+    private void cmbStatutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbStatutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_cmbStatutActionPerformed
 
     private void jPanel3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseReleased
         // TODO add your handling code here:
@@ -1802,6 +1830,77 @@ public class Menue extends javax.swing.JFrame {
         txtReserveQuantite.setText(model.getValueAt(i, 3).toString());
     }//GEN-LAST:event_jTable_reservéesMouseReleased
 
+    private void cmbMethodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMethodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbMethodeActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+        try {
+        String sql = "INSERT INTO paiements (id, id_reservation, montant, methode, date_paiement, statut) VALUES (?, ?, ?, ?, ?, ?)";
+        pst = con.prepareStatement(sql);
+        pst.setString(1, txtIdPaiement.getText());
+        pst.setString(2, txtIdReservation.getText());
+        pst.setDouble(3, Double.parseDouble(txtMontant.getText()));
+        pst.setString(4, cmbMethode.getSelectedItem().toString());
+        pst.setString(5, txtDatePaiement.getText());
+        pst.setString(6, cmbStatut.getSelectedItem().toString());
+        pst.executeUpdate();
+        JOptionPane.showMessageDialog(this, "Paiement ajouté avec succès");
+        loadTable("paiements", new String[]{"id", "id_reservation", "montant", "methode", "date_paiement", "statut"}, jTable_paiements);
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout du paiement : " + e.getMessage());
+    }
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+        try {
+        String sql = "UPDATE paiements SET id_reservation = ?, montant = ?, methode = ?, date_paiement = ?, statut = ? WHERE id = ?";
+        pst = con.prepareStatement(sql);
+        pst.setString(1, txtIdReservation.getText());
+        pst.setDouble(2, Double.parseDouble(txtMontant.getText()));
+        pst.setString(3, cmbMethode.getSelectedItem().toString());
+        pst.setString(4, txtDatePaiement.getText());
+        pst.setString(5, cmbStatut.getSelectedItem().toString());
+        pst.setString(6, txtIdPaiement.getText());
+        pst.executeUpdate();
+        JOptionPane.showMessageDialog(this, "Paiement mis à jour avec succès");
+        loadTable("paiements", new String[]{"id", "id_reservation", "montant", "methode", "date_paiement", "statut"}, jTable_paiements);
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Erreur lors de la mise à jour du paiement : " + e.getMessage());
+    }
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+        try {
+        String sql = "DELETE FROM paiements WHERE id = ?";
+        pst = con.prepareStatement(sql);
+        pst.setString(1, txtIdPaiement.getText());
+        pst.executeUpdate();
+        JOptionPane.showMessageDialog(this, "Paiement supprimé avec succès");
+        loadTable("paiements", new String[]{"id", "id_reservation", "montant", "methode", "date_paiement", "statut"}, jTable_paiements);
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(this, "Erreur lors de la suppression du paiement : " + e.getMessage());
+    }
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jTable_paiementsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_paiementsMouseReleased
+        // TODO add your handling code here:
+    int i = jTable_paiements.getSelectedRow();
+    DefaultTableModel model = (DefaultTableModel) jTable_paiements.getModel();
+    txtIdPaiement.setText(model.getValueAt(i, 0).toString());
+    txtIdReservation.setText(model.getValueAt(i, 1).toString());
+    txtMontant.setText(model.getValueAt(i, 2).toString());
+    cmbMethode.setSelectedItem(model.getValueAt(i, 3).toString());
+    txtDatePaiement.setText(model.getValueAt(i, 4).toString());
+    cmbStatut.setSelectedItem(model.getValueAt(i, 5).toString());
+    }//GEN-LAST:event_jTable_paiementsMouseReleased
+
     /**
      * @param args the command line arguments
      */
@@ -1838,6 +1937,8 @@ public class Menue extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> cmbMethode;
+    private javax.swing.JComboBox<String> cmbStatut;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1862,7 +1963,6 @@ public class Menue extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1938,28 +2038,27 @@ public class Menue extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTable jTable8;
     private javax.swing.JTable jTable_chambres;
     private javax.swing.JTable jTable_clients;
     private javax.swing.JTable jTable_hotels;
+    private javax.swing.JTable jTable_paiements;
     private javax.swing.JTable jTable_reservations;
     private javax.swing.JTable jTable_reservées;
     private javax.swing.JTable jTable_services;
     private javax.swing.JTable jTable_types;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
     private javax.swing.JTextField txtChambreHotelId;
     private javax.swing.JTextField txtChambreId;
     private javax.swing.JTextField txtChambreStatut;
     private javax.swing.JTextField txtChambreTypeId;
+    private javax.swing.JTextField txtDatePaiement;
     private javax.swing.JComboBox<String> txtHotelAdresse;
     private javax.swing.JTextField txtHotelId;
     private javax.swing.JTextField txtHotelNom;
     private javax.swing.JTextField txtHotelTelephone;
     private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtIdPaiement;
+    private javax.swing.JTextField txtIdReservation;
+    private javax.swing.JTextField txtMontant;
     private javax.swing.JTextField txtReservationChambreId;
     private javax.swing.JTextField txtReservationClientId;
     private javax.swing.JTextField txtReservationDateDebut;
